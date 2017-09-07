@@ -1,82 +1,75 @@
 
-*{ 	
-	background-color: rgb(66,69,78);
- 	margin: 0;
- 	padding: 0;
- 	text-decoration: none;
- 	list-style: none;
- }
- div.fondo{
-
- 	position: relative;
- }
- div.correo{
- 	
- 	position: relative;
- }
- 
-
-
-.toggle_menu {
-	position: absolute;
-	color: red;
-	opacity: 0.7;
-	background-color: black;
-	cursor: pointer;
-	/*z-index: 2; */
-	font-size: 2em;
-	
-} 
-.toggle_menu:hover{
-	opacity: 1;
-	transition: all 0.3s ease-in-out;
-}
-.sidebar_menu {
-	width: 600px;
-	margin-top: -280px;
-	margin-left: 1350px;
-	margin-right: 0;
-	margin-left: o;
-	margin-bottom: 0;
-	overflow: hidden;
-	height: 750px;
-	max-height: 100vh;
-	background-color: rgba(17, 17, 17, 0.9);
-	opacity: 0.9;
-	transition: all 0.3s ease-in-out;
-	z-index: 4; 
-	position: relative;
-}
-
-.hide_menu{
-	margin-left: 747px;
-	transition: all 0.3s ease-in-out;
-}
-
-.time{
-	font-family: 'Montserrat', sans-sefit;
-	font-size: 135%;
-	color: white;
-	opacity: 0.7;
-	cursor: pointer;
+body{
+	margin: 0;
+	/*font-family: sans-serif;*/
+	font: 15px Arial, Heletica, sans-serif;
 	text-align: center;
+	letter-spacing: 5px;
+	background-color: rgb(47,60,76);
+}
+
+header{
+	width: 100vw;
+	background:black; 
+}
+
+#btn-menu {
+	display: none;
+}
+header label {
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	border-right: 1px solid #fff;
+}
+header label:hover {
+	cursor: pointer;
+	background: rgba(0,0,0,0.3); 
+}
+
+.menu ul {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+.menu li {
+	border-right: 1px solid;
+}
+.menu li:hover {
+	background: rgba(0,0,0,0.3); 
+}
+
+li img {margin-top: 7px; margin-left: 20px; float:left;} 
+h1{
+	color:white;
+}
+
+.menu li a {
+	display: block;
+	padding: 5px 20px; 
+	color: #fff;
 	text-decoration: none;
-	/*border: solid #111111; */
-	padding: 20px 20px;
-	/*border-radius: 700px; */
-	transition: all 0.5s;
-	transition: all 0.3s ease-in-out;
-	z-index: 5;
 }
-.time:hover {
-	opacity: 1;
-	color: red;
-	/*border: solid #CBDFD6 2px;*/
-	z-index: 5;
-} 
-
-.opacity_one{
-	opacity: 1;
-	transition: all 0.3s ease-in-out;
+@media (max-width:768px){
+	header label {
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		background: rgb(71, 84, 101);
+		width: 70%;
+		margin-left: -98%; 
+		transition: all 0.1s;
+	}
+	.menu ul {
+		flex-direction: column;
+	}
+	menu li {
+		border-top: 1px solid; 
+	}
+	#btn-menu:checked ~ .menu{
+		margin: 0;
+	}
 }
-
